@@ -19,7 +19,7 @@ public class ParkingInfo {
   @Schema(description = "출차 시간", example = "2025-03-15T14:00:0")
   private LocalDateTime exitTime;
   @Schema(description = "주차 상태", example = "true")
-  private boolean isParked;
+  private boolean parked;
 
   public static ParkingInfo generateInfo(ParkingInfoID id,
       ParkingInfoPlate plate,

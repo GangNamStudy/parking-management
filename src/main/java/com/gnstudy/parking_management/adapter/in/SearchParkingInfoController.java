@@ -45,7 +45,8 @@ public class SearchParkingInfoController {
       @RequestParam(value = "limit", required = false) Integer limit,
       @Parameter(description = "검색할 차량 번호판")
       @RequestParam(value = "plate", required = false) String plate) {
-    return null;
+    //TODO:서비스 코드 작성
+    throw new UnsupportedOperationException("Not implemented yet");
   }
 
   @GetMapping("/id/{id}")
@@ -60,7 +61,8 @@ public class SearchParkingInfoController {
   public ResponseEntity<ParkingInfo> getVehicleById(
       @Parameter(description = "검색할 데이터 ID")
       @PathVariable("id") Long id) {
-    return null;
+    //TODO:서비스 코드 작성
+    throw new UnsupportedOperationException("Not implemented yet");
   }
 
   @GetMapping("/plate/{numberplate}")
@@ -75,8 +77,8 @@ public class SearchParkingInfoController {
   public ResponseEntity<ParkingInfo> getVehicleByPlate(
       @Parameter(description = "검색할 차량 번호판")
       @PathVariable("numberplate") String numberplate) {
-
-    return null;
+    //TODO:서비스 코드 작성
+    throw new UnsupportedOperationException("Not implemented yet");
   }
 
   @PostMapping("/")
@@ -89,8 +91,8 @@ public class SearchParkingInfoController {
           content = @Content(mediaType = "application/json", schema = @Schema(implementation = ParkingControlResultDTO.class)))
   })
   public ResponseEntity<ParkingControlResultDTO> vehicleEntry(@RequestBody VehicleEntrtyRequestDTO request) {
-
-    return null;
+    //TODO:서비스 코드 작성
+    throw new UnsupportedOperationException("Not implemented yet");
   }
 
   @PutMapping("/exit/{plate}")
@@ -106,7 +108,8 @@ public class SearchParkingInfoController {
       @Parameter(description = "출차할 차량 번호판")
       @PathVariable("plate") String plate,
       @RequestBody(required = false) VehicleExitRequestDTO request) {
-    return null;
+    //TODO:서비스 코드 작성
+    throw new UnsupportedOperationException("Not implemented yet");
   }
 
 

@@ -1,8 +1,5 @@
 package com.gnstudy.parking_management.adapter.in;
 
-import com.gnstudy.parking_management.adapter.in.dto.ParkingControlResultDTO;
-import com.gnstudy.parking_management.adapter.in.dto.VehicleEntrtyRequestDTO;
-import com.gnstudy.parking_management.adapter.in.dto.VehicleExitRequestDTO;
 import com.gnstudy.parking_management.application.port.in.SearchParkingInfoCommand;
 import com.gnstudy.parking_management.application.port.in.SearchParkingInfoUseCase;
 import com.gnstudy.parking_management.domain.ParkingInfo;
@@ -20,9 +17,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

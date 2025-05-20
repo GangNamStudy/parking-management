@@ -34,7 +34,7 @@ public class SearchParkingInfoService implements SearchParkingInfoUseCase {
         new ParkingInfoPlate(command.getNumberPlate()),
         command.getStartDate(),
         command.getEndDate(),
-        1).getFirst());
+        1).get(0));
   }
 
   @Override

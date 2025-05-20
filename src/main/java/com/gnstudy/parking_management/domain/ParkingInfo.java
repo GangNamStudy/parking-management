@@ -26,12 +26,14 @@ public class ParkingInfo {
       ParkingInfoEntryTime entryTime,
       ParkingInfoExitTime exitTime,
       ParkingInfoIsParked isParked) {
+    if(isParked.isParked==null)
+      throw new RuntimeException();
     return new ParkingInfo(
         id.getId(),
         plate.getPlate(),
         entryTime.getEntryTime(),
-        exitTime.getEntryTime(),
-        isParked.isParked()
+        exitTime.getExitTime(),
+        isParked.getIsParked()
     );
   }
 
@@ -55,14 +57,14 @@ public class ParkingInfo {
 
   @Value
   public static class ParkingInfoExitTime{
-    LocalDateTime entryTime;
-    public ParkingInfoExitTime(LocalDateTime entryTime){this.entryTime=entryTime;}
+    LocalDateTime exitTime;
+    public ParkingInfoExitTime(LocalDateTime exitTime){this.exitTime=exitTime;}
   }
 
   @Value
   public static class ParkingInfoIsParked{
-    boolean isParked;
-    public ParkingInfoIsParked(boolean isParked){this.isParked=isParked;}
+    Boolean isParked;
+    public ParkingInfoIsParked(Boolean isParked){this.isParked=isParked;}
   }
 
 

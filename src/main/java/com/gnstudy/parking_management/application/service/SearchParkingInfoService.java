@@ -7,18 +7,17 @@ import com.gnstudy.parking_management.application.port.in.SearchParkingInfoUseCa
 import com.gnstudy.parking_management.application.port.out.SearchParkingInfoPort;
 import com.gnstudy.parking_management.common.UseCase;
 import com.gnstudy.parking_management.domain.ParkingInfo;
-import com.gnstudy.parking_management.domain.ParkingInfo.ParkingInfoEntryTime;
 import com.gnstudy.parking_management.domain.ParkingInfo.ParkingInfoID;
 import com.gnstudy.parking_management.domain.ParkingInfo.ParkingInfoIsParked;
 import com.gnstudy.parking_management.domain.ParkingInfo.ParkingInfoPlate;
-import jakarta.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @UseCase
-@Transactional
+@Transactional(readOnly = true)
 public class SearchParkingInfoService implements SearchParkingInfoUseCase {
   private final SearchParkingInfoPort searchParkingInfoPort;
   private final ParkingInfoMapper parkingInfoMapper;

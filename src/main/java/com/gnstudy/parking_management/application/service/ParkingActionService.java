@@ -23,7 +23,7 @@ public class ParkingActionService implements ParkingActionUseCase {
     public ParkingInfo entry(ParkingActionCommand command) {
         return parkingInfoMapper.mapToDomainEntity(parkingActionPort.createParkingInfo(new ParkingInfo.ParkingInfoPlate(command.getPlate()),
                 new ParkingInfo.ParkingInfoEntryTime(command.getTimeInfo()),
-                null));
+                new ParkingInfo.ParkingInfoExitTime(null)));
     }
 
     @Override

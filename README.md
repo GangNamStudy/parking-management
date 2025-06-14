@@ -66,7 +66,7 @@
   - **URL**: `/api/vehicles/plate/{numberplate}`
   - **Path Parameter**:
     - `{numberplate}`: 조회할 차량의 번호판
-  - **설명**: 차량의 번호판을 사용하여 검색
+  - **설명**: 주차된 차량의 번호판을 사용하여 검색, 출차된 차량의 번호판을 넣으면 검색되지 않음
   - **예제 cURL 요청**:
     ```bash
     curl -X GET "http://localhost:8080/api/vehicles/plate/ABC123" -H "Content-Type: application/json"
@@ -125,7 +125,8 @@
   {
     "status": "success",
     "plate": "ABC123",
-    "entryTime": "2025-02-15T14:00:00"
+    "entryTime": "2025-02-15T14:00:00",
+    "exitTime": "2025-02-15T18:00:00"
   }
   ```
 

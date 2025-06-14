@@ -24,5 +24,5 @@ public interface ParkingInfoRepository extends JpaRepository<ParkingInfoJpaEntit
       @Param("plate")     String plate,
       Pageable pageable
   );
-  ParkingInfoJpaEntity findByPlate(String plate);
+  ParkingInfoJpaEntity findByPlateAndParkedTrue(String plate);
 }

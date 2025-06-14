@@ -67,5 +67,13 @@ public class ParkingInfo {
     public ParkingInfoIsParked(Boolean isParked){this.isParked=isParked;}
   }
 
+  public void exit(LocalDateTime exitTime)
+  {
+    if(this.parked==false || this.exitTime!=null)
+      throw new RuntimeException("이미 출차된 차량 입니다.");
+    this.parked=false;
+    this.exitTime=exitTime;
+  }
+
 
 }
